@@ -7,7 +7,7 @@ Create a mini test framework with one test that will launch any ecommerce site s
 
 3 - Verify the correct item has been added to the card
 
-**All code needs to be committed to this git repository.**
+**All code needs to be committed to this git repository. (If you are struggling with git then a ZIP file needs to be emailed to me)**
 
 # Bonus Points
 - If done in Typescript (not compulsory, can be done in any language you are comfortable with).
