@@ -17,6 +17,6 @@ Create a mini test framework with one test that will launch any ecommerce site s
 # Contact
 If needed my contact details are below:
 
-Email - shahzaad.tayob@accenture.com
+Email - sinenhlanhla.zondi@accenture.com
 
-Phone - 0826669982
+Phone - 0837656163
