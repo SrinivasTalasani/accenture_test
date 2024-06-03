@@ -55,7 +55,6 @@ public class Objects {
     WebElement toggle;
 
 
-
     public void clickElectronicsLinkLink() throws InterruptedException {
         Thread.sleep(4000);
         Actions actions = new Actions(driver);
@@ -113,21 +112,25 @@ public class Objects {
 
     public void clickOnCartButton() throws InterruptedException {
         Thread.sleep(5000);
-            addCartButton.click();
-            System.out.println("Clicked on add to card");
+        addCartButton.click();
+        System.out.println("Clicked on add to card");
 
     }
 
-public void clickGotoCart(){
+    public void clickGotoCart() throws InterruptedException {
+        Thread.sleep(3000);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollTo(0,0)", "");
+        Thread.sleep(3000);
         goToCartButton.click();
-    System.out.println("Clicked on go to cart button");
-}
+        System.out.println("Clicked on go to cart button");
+    }
 
-public void verifyCartItem(){
-    cartItem.isDisplayed();
-    String item = cartItem.getText();
-    System.out.println(item);
-    Assert.assertEquals(cartItem,item);
-}
+    public void verifyCartItem() {
+        cartItem.isDisplayed();
+        String item = cartItem.getText();
+        System.out.println(item);
+        Assert.assertEquals(cartItem, item);
+    }
 
 }

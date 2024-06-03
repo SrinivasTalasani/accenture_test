@@ -36,8 +36,6 @@ public class stepDefs {
     public void userLaunchUrl() throws InterruptedException {
 
 
-
-
     }
 
 
@@ -67,7 +65,7 @@ public class stepDefs {
     }
 
     @Then("User added Tv to the cart and verified")
-    public void userAddedTvToTheCartAndVerified() {
+    public void userAddedTvToTheCartAndVerified() throws InterruptedException {
         objects.clickGotoCart();
         objects.verifyCartItem();
     }
