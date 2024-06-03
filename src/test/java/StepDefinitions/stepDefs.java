@@ -1,5 +1,6 @@
 package StepDefinitions;
 
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
@@ -26,18 +27,10 @@ public class stepDefs {
     }
 
 
-    @When("User captures userame {string} and password {string}")
-    public void user_captures_userame_and_password(String string, String string2) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-    }
-
-    @Given("User launch url")
-    public void userLaunchUrl() throws InterruptedException {
-
-
-    }
-
+  @After
+  public void closeBrowser(){
+        driver.close();
+  }
 
     @Given("User launched url and clicked on electronics")
     public void userLaunchedUrlAndClickedOnElectronics() throws InterruptedException {

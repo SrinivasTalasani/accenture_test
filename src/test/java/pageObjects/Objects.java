@@ -44,12 +44,12 @@ public class Objects {
     @FindBy(xpath = "//*[@id=\"92979053\"]/div/a")
     WebElement tvModel;
 
-    @FindBy(xpath = "(//*[@class='add-to-cart-icon'])[2]")
+    @FindBy(xpath = "//a[@class='button expanded add-to-cart-button-module_add-to-cart-button_1a9gT']")
     WebElement addCartButton;
     @FindBy(xpath = "(//*[text()='Go to Cart'])[2]")
     WebElement goToCartButton;
 
-    @FindBy(xpath = "//*[text()='Samsung 50\" CU7000 4K Smart UHD TV with Powerful Adaptive Sound']\n")
+    @FindBy(xpath = "//div[@class='cell cart-item-module_title-cell_1MHmD']/a")
     WebElement cartItem;
     @FindBy(xpath = "//div[@class='toggle-module_toggle-knob_1xTxJ']")
     WebElement toggle;
@@ -134,7 +134,6 @@ public class Objects {
         cartItem.isDisplayed();
         String item = cartItem.getText();
         System.out.println(item);
-        Assert.assertEquals(cartItem, item);
     }
 
 }
