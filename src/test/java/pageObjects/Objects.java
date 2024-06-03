@@ -44,7 +44,7 @@ public class Objects {
     @FindBy(xpath = "//*[@id=\"92979053\"]/div/a")
     WebElement tvModel;
 
-    @FindBy(xpath = "//*[@class='add-to-cart-icon']")
+    @FindBy(xpath = "(//*[@class='add-to-cart-icon'])[2]")
     WebElement addCartButton;
     @FindBy(xpath = "(//*[text()='Go to Cart'])[2]")
     WebElement goToCartButton;
@@ -112,15 +112,19 @@ public class Objects {
 
     public void clickOnCartButton() throws InterruptedException {
         Thread.sleep(5000);
-        addCartButton.click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("window.scrollBy(0,0)", "");
+        try {
+            addCartButton.click();
+        }
+        catch (Exception e){
+            addCartButton.click();
+        }
         System.out.println("Clicked on add to card");
 
     }
 
     public void clickGotoCart() throws InterruptedException {
-        Thread.sleep(3000);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollTo(0,0)", "");
         Thread.sleep(3000);
         goToCartButton.click();
         System.out.println("Clicked on go to cart button");
