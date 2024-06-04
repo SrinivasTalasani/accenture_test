@@ -124,13 +124,15 @@ public class Objects {
 
     }
 
+
     public void clickGotoCart() throws InterruptedException {
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         goToCartButton.click();
         System.out.println("Clicked on go to cart button");
     }
 
-    public void verifyCartItem() {
+    public void verifyCartItem() throws InterruptedException {
+        Thread.sleep(3000);
         cartItem.isDisplayed();
         String item = cartItem.getText();
         System.out.println(item);
